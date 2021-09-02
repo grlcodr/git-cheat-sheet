@@ -18,6 +18,18 @@
         bottom: 0;
     }
 
+    #navbar li {
+        padding: 20px 0px;
+    }
+
+    a {
+        color: black;
+    }
+
+    a:visited {
+        color: nayv;
+    }
+
     #main-header {
         padding: 20px 30px;
     }
@@ -51,14 +63,15 @@
 
     .section-wrapper p {
         margin-top: 10px;
-        color: green;
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 10px;
+        font-size: 14px;
     }
 
     .section-wrapper h4 {
         text-decoration: underline;
         margin-top: 20px;
+        font-family: Lato;
     }
 
     code {
@@ -97,7 +110,6 @@
         padding-bottom: 30px;
         font-family: 'Montserrat', sans-serif;
     }
-
     .main-section h3 {
         font-family: 'Lato', sans-serif;
         padding-bottom: 10px;
@@ -105,13 +117,15 @@
 
     .section-wrapper p {
         margin-top: 10px;
-        color: green;
+        font-size: 14px;
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 10px;
     }
+
     .section-wrapper h4 {
         text-decoration: underline;
         margin-top: 20px;
+        font-family: Lato;
     }
 
     code {
@@ -120,5 +134,9 @@
 
     .section-wrapper ul {
         list-style-type: none;
+    }
+
+    hr {
+        display: none;
     }
   }
