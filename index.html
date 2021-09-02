@@ -13,12 +13,12 @@
                 <h1 id="main-header">Git Cheat Sheet</h1>
             </header>
             <ul>
-                <li><a href="#basics">Basics</a></li>
-                <li><a href="#branches">Branches</a></li>
-                <li><a href="#commit">Commit</a></li>
-                <li><a href="#config">Config</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="#undo">Undo</a></li>
+                <li><a class="nav-link" href="#basics">Basics</a></li>
+                <li><a class="nav-link" href="#branches">Branches</a></li>
+                <li><a class="nav-link" href="#commit">Commit</a></li>
+                <li><a class="nav-link" href="#config">Config</a></li>
+                <li><a class="nav-link" href="#history">History</a></li>
+                <li><a class="nav-link" href="#undo">Undo</a></li>
             </ul>
         </nav>
     <main id="main-doc">
@@ -27,37 +27,128 @@
                 <h3>Basics</h3>
             </header>
             <div class="section-wrapper">
+                <h4>Git Resources</h4>
+                <p>There are lots of great resources for learning git, a few examples:</p>
+                <ul>
+                    <li>Github</li>
+                    <li>Atlassian</li>
+                    <li>Codecademy</li>
+                    <li>Youtube</li>
+                    <li>Git Kraken</li>
+                </ul>
                 <h4>git init</h4>
-                <p>Create an empty Git repository in the specified directory.</p>
+                <p>Create an empty Git repository in the specified directory</p>
                 <code>git init &lt;directory-name&gt;</code>
                 <p>Use with no arguments to initialize in the current directory</p>
                 <code>git init</code>
+                <h4>git clone</h4>
+                <p>Clone repository from specified location to local machine, via HTTP or SSH</p>
+                <code>git clone &lt;repo&gt;</code>
+                <h4>git status</h4>
+                <p>List files that are staged, unstaged and untracked</p>
+                <code>git status</code>
+                <h4>git log</h4>
+                <p>Display the commit history (default format)</p>
+                <code>git log</code>
+                <h4>git add</h4>
+                <p>Stage all changes in the directory for the next commit - directory can be replaced by a single file, or use a full stop for all</p>
+                <code>git add &lt;directory&gt;</code>
+                <br>
+                <code>git add &lt;file&gt;</code>
+                <br>
+                <code>git add .</code>
+                <h4>git remote</h4>
+                <p>Create a new connection to a remote repository</p>
+                <code>git remote add &lt;name&gt; &lt;url&gt;</code>
+                <h4>git pull</h4>
+                <p>Fetch the remote copy of the current branch and merge into local copy</p>
+                <code>git pull</code>
             </div>
         </section>
         <section class="main-section" id="branches">
             <header>
                 <h3>Branches</h3>
             </header>
+            <div class="section-wrapper">
+                <h4>git branch</h4>
+                <p>List all of the branches in repository.</p>
+                <code>git branch</code>
+                <p>Add a branch arg to create a new branch with the name specified</p>
+                <code>git branch &lt;branch-name&gt;</code>
+                <p>Create a new branch and switch to it</p>
+                <code>git checkout -b &lt;branch-name&gt;</code>
+                <h4>git merge</h4>
+                <p>Merge specified branch into the current branch</p>
+                <code>git merge &lt;branch-name&gt;</code>
+                <h4>git branch -d</h4>
+                <p>Delete a branch</p>
+                <code>git branch -d &lt;branch-name&gt;</code>
+            </div>
         </section>
         <section class="main-section" id="commit">
             <header>
                 <h3>Commit</h3>
             </header>
+            <div class="section-wrapper">
+                <h4>git commit</h4>
+                <p>Commit the staged snapshot - entering text edit to add a message</p>
+                <code>git commit</code>
+                <p>Commit the staged snapshot, using the specified message as the commit message</p>
+                <code>git commit -m "message"</code>
+                <p>Replace the last commit with staged changes and last commit combined.</p>
+                <code>git commit --amend</code>
+                <h4>git push</h4>
+                <p>Push the branch to the remote repository, along with commits and objects</p>
+                <code>git push</code>
+            </div>
         </section>
         <section class="main-section" id="config">
             <header>
                 <h3>Config</h3>
             </header>
+            <div class="section-wrapper">
+                <h4>git config</h4>
+                <p>Open the global config file in a text editor</p>
+                <code>git config --global --edit</code>
+                <p>Set the author name to use is commits for the current user</p>
+                <code>git config --global user.name &lt;name&gt;</code>
+                <p>Set the author email to use is commits for the current user</p>
+                <code>git config --global user.email &lt;email&gt;</code>
+            </div>
         </section>
         <section class="main-section" id="history">
             <header>
                 <h3>History</h3>
             </header>
+            <div class="section-wrapper">
+                <h4>git rebase</h4>
+                <p>Apply any commits of the current branch ahead of the specified one</p>
+                <code>git rebase &lt;branch&gt;</code>
+                <h4>git reset</h4>
+                <p>Clear the staging area, rewiting the working tree from a specific commit</p>
+                <code>git reset --hard &lt;commit&gt;</code>
+                <h4>git reflog</h4>
+                <p>Show a log of changes to the local repository's HEAD/p>
+                <code>git reflog</code>
+            </div>
         </section>
         <section class="main-section" id="undo">
             <header>
                 <h3>Undo</h3>
             </header>
+            <div class="section-wrapper">
+                <h4>git reset</h4>
+                <p>Revert all changes to the last commit</p>
+                <code>git reset --hard</code>
+                <h4>git clean</h4>
+                <p>Remove new and untracked files and directories</p>
+                <code>git clean -f</code>
+                <p>To preview the files that will be permanently deleted</p>
+                <code>git clean --dry-run</code>
+                <h4>git revert</h4>
+                <p>Revert a commit in a new commit</p>
+                <code>git revert &lt;commit-id&gt;</code>
+            </div>
         </section>
     </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

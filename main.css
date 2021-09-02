@@ -13,6 +13,9 @@
         border-right: 1px solid grey;
         height: 100vh;
         font-family: 'Lato', sans-serif;
+        position: sticky;
+        top: 0;
+        bottom: 0;
     }
 
     #main-header {
@@ -43,17 +46,27 @@
 
     .main-section h3 {
         font-family: 'Lato', sans-serif;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     .section-wrapper p {
         margin-top: 10px;
         color: green;
         font-family: 'Montserrat', sans-serif;
+        margin-bottom: 10px;
+    }
+
+    .section-wrapper h4 {
+        text-decoration: underline;
+        margin-top: 20px;
     }
 
     code {
         color: rgb(219, 81, 104);
+    }
+    
+    .section-wrapper ul {
+        padding-left: 30px;
     }
 
   }
@@ -87,16 +100,25 @@
 
     .main-section h3 {
         font-family: 'Lato', sans-serif;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     .section-wrapper p {
         margin-top: 10px;
         color: green;
         font-family: 'Montserrat', sans-serif;
+        margin-bottom: 10px;
+    }
+    .section-wrapper h4 {
+        text-decoration: underline;
+        margin-top: 20px;
     }
 
     code {
         color: rgb(219, 81, 104);
+    }
+
+    .section-wrapper ul {
+        list-style-type: none;
     }
   }
