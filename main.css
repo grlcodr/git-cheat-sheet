@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@200&display=swap');
+
+/* large screens/desktop */
+@media only screen and (min-width: 701px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #navbar {
+        width: 250px;
+        border-right: 1px solid grey;
+        height: 100vh;
+        font-family: 'Lato', sans-serif;
+    }
+
+    #main-header {
+        padding: 20px 30px;
+    }
+
+    #navbar li {
+        list-style-type: none;
+        padding-left: 30px;
+    }
+
+    #navbar a {
+        text-decoration: none;
+    }
+
+    body {
+        display: flex;
+    }
+
+    #main-doc {
+        padding: 30px;
+    }
+
+    .section-wrapper {
+        padding-bottom: 30px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .main-section h3 {
+        font-family: 'Lato', sans-serif;
+        padding-bottom: 20px;
+    }
+
+    .section-wrapper p {
+        margin-top: 10px;
+        color: green;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    code {
+        color: rgb(219, 81, 104);
+    }
+
+  }
+
+  /* small devices/screens */
+
+  @media only screen and (max-width: 700px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #navbar {
+       width: 100%;
+       text-align: center;  
+       padding: 20px;    
+    } 
+
+    #navbar li {
+       display: none;
+    }
+
+    #main-doc {
+    padding: 20px;
+    text-align: center;
+    }
+    .section-wrapper {
+        padding-bottom: 30px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .main-section h3 {
+        font-family: 'Lato', sans-serif;
+        padding-bottom: 20px;
+    }
+
+    .section-wrapper p {
+        margin-top: 10px;
+        color: green;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    code {
+        color: rgb(219, 81, 104);
+    }
+  }
